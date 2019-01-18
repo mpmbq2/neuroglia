@@ -28,10 +28,20 @@ Trace transformers
     trace.Binarizer
     trace.EdgeDetector
     trace.WhenTrueFinder
-    calcium.OASISInferer
-    calcium.MedianFilterDetrend
-    calcium.SavGolFilterDetrend
-    calcium.EventRescale
+
+
+.. _calcium_api:
+
+Calcium transformers
+--------------------
+
+.. autosummary::
+   :toctree: generated/
+
+    calcium.CalciumDeconvolver
+    calcium.MedianFilterDetrender
+    calcium.SavGolFilterDetrender
+    calcium.EventRescaler
 
 
 .. _event_api:
@@ -44,6 +54,17 @@ Event transformers
 
     event.PeriEventSpikeSampler
     event.PeriEventTraceSampler
+    event.PeriEventTraceReducer
+
+.. _epoch_api:
+
+Epoch transformers
+------------------
+
+.. autosummary::
+   :toctree: generated/
+
+    epoch.EpochTraceReducer
 
 .. _tensor_api:
 

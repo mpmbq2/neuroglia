@@ -33,6 +33,20 @@ sys.path.insert(0, project_root)
 
 import neuroglia
 import sphinx_bootstrap_theme
+from mock import MagicMock
+
+# from: http://read-the-docs.readthedocs.io/en/latest/faq.html#i-get-import-errors-on-libraries-that-depend-on-c-modules
+
+
+class Mock(MagicMock):
+
+    @classmethod
+    def __getattr__(cls, name):
+        return MagicMock()
+
+
+MOCK_MODULES = ["neuroglia.calcium.oasis.oasis_methods"]
+sys.modules.update((mod_name, Mock()) for mod_name in MOCK_MODULES)
 
 # -- General configuration ---------------------------------------------
 
@@ -128,6 +142,15 @@ sphinx_gallery_conf = {
     'download_section_examples': False,
     'default_thumb_file': '_static/max_proj.png',
     'min_reported_time': 10,
+
+    # 'binder': {
+    #     'org': 'AllenInstitute',
+    #     'repo': 'http://neuroglia.readthedocs.io',
+    #     'url': 'https://mybinder.org',
+    #     'branch': 'master',
+    #     'dependencies': './binder/requirements.txt',
+    #     }
+
     }
 
 

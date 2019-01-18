@@ -6,6 +6,13 @@ neuroglia: more than just brain glue
 .. raw:: html
 
     <div style="clear: both"></div>
+    <div class="container-fluid hidden-xs hidden-sm">
+      <div class="row">
+        <img src="_static/neuroglia_banner_1140x190.png">
+      </div>
+    </div>
+    <br>
+
     <div class="container-fluid">
     <div class="row">
     <div class="col-md-6">
@@ -46,7 +53,9 @@ To see the code or report a bug, please visit the `github repository
 
 * Spike transformers: :ref:`API <spike_api>`
 * Trace transformers: :ref:`API <trace_api>`
+* Calcium transformers: :ref:`API <calcium_api>`
 * Event transformers: :ref:`API <event_api>`
+* Epoch transformers: :ref:`API <epoch_api>`
 * Tensor transformers: :ref:`API <tensor_api>`
 
 .. raw:: html
